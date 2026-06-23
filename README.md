@@ -15,7 +15,7 @@ RUNDLL32.EXE user32.dll, UpdatePerUserSystemParameters
 
 3. Save as `black-wallpaper.ps1` — make sure to change "Save as type" to **All Files**, otherwise Notepad adds `.txt` to the end
 
-The `Background` registry value `0 0 0` sets the solid color to pure black.[^3_1][^3_2]
+The `Background` registry value `0 0 0` sets the solid color to pure black.
 
 ## Step 2 — Add to Task Scheduler
 
@@ -30,7 +30,7 @@ The `Background` registry value `0 0 0` sets the solid color to pure black.[^3_1
     - Replace `YourName` with your actual Windows username
 7. Click **Finish**
 
-No admin prompt, no visible window on startup.[^3_3][^3_4]
+No admin prompt, no visible window on startup.
 
 ## Step 3 — Test It
 
