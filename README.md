@@ -13,6 +13,9 @@ Set-ItemProperty -Path "HKCU:\Control Panel\Colors" -Name Background -Value "0 0
 # Remove wallpaper
 Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name Wallpaper -Value ""
 
+Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name WallpaperStyle -Value "0"
+Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name TileWallpaper -Value "0"
+
 # Apply changes immediately
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 ```
