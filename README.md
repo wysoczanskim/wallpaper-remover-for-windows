@@ -7,10 +7,14 @@ This is a quick Windows scripting task:
 1. Open **Notepad**
 2. Paste this:
 ```powershell
-Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop\' -Name WallPaper -Value ""
-Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop\' -Name WallpaperStyle -Value "0"
-Set-ItemProperty -Path 'HKCU:\Control Panel\Colors\' -Name Background -Value "0 0 0"
-RUNDLL32.EXE user32.dll, UpdatePerUserSystemParameters
+# Set background color to black (RGB 0,0,0)
+Set-ItemProperty -Path "HKCU:\Control Panel\Colors" -Name Background -Value "0 0 0"
+
+# Remove wallpaper
+Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name Wallpaper -Value ""
+
+# Apply changes immediately
+RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
 ```
 
 3. Save as `black-wallpaper.ps1` — make sure to change "Save as type" to **All Files**, otherwise Notepad adds `.txt` to the end
